@@ -61,9 +61,10 @@ Makefile.config
 # Data and models are either
 # 1. reference, and not casually committed
 # 2. custom, and live on their own unless they're deliberated contributed
+# 2020-07-16 allowed VGGNet to be downloaded in a docker container
 data/*
-models/*
-*.caffemodel
+#models/*
+#*.caffemodel
 *.caffemodel.h5
 *.solverstate
 *.solverstate.h5
