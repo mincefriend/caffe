@@ -26,9 +26,9 @@ resume_training = False
 remove_old_models = False
 
 # The database file for training data. Created by data/coco/create_data.sh
-train_data = "/home/szq/Datasets/coco/coco_train_lmdb"
+train_data = "/root/data/coco/lmdb/coco_train_lmdb"
 # The database file for testing data. Created by data/coco/create_data.sh
-test_data = "/home/szq/Datasets/coco/coco_minival_lmdb"
+test_data = "/root/data/coco/lmdb/coco_test_lmdb"
 # Specify the batch sampler.
 resize_width = 300
 resize_height = 300
