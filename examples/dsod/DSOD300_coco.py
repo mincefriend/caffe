@@ -15,13 +15,14 @@ import sys
 ### Modify the following parameters accordingly ###
 # The directory which contains the caffe code.
 # We assume you are running the script at the CAFFE_ROOT.
-caffe_root = os.getcwd()
+# Changed to fixed path in docker
+caffe_root = /opt/caffe
 
 # Set true if you want to start training right after generating all files.
 run_soon = True
 # Set true if you want to load from most recently saved snapshot.
 # Otherwise, we will load from scratch.
-resume_training = False
+resume_training = True
 # If true, Remove old model files.
 remove_old_models = False
 
@@ -186,11 +187,11 @@ job_name = "DSOD300_{}".format(resize)
 model_name = "DSOD300_coco_{}".format(job_name)
 
 # Directory which stores the model .prototxt file.
-save_dir = "models/DSOD300/coco/{}".format(job_name)
+save_dir = "/workdir/models/DSOD300/coco/{}".format(job_name)
 # Directory which stores the snapshot of models.
-snapshot_dir = "models/DSOD300/coco/{}".format(job_name)
+snapshot_dir = "/workdir/models/DSOD300/coco/{}".format(job_name)
 # Directory which stores the job script and log file.
-job_dir = "jobs/DSOD300/coco/{}".format(job_name)
+job_dir = "/workdir/jobs/DSOD300/coco/{}".format(job_name)
 # Directory which stores the detection results.
 output_result_dir = "{}/data/mscoco/results/{}".format(os.environ['HOME'], job_name)
 
@@ -283,8 +284,8 @@ gpulist = gpus.split(",")
 num_gpus = len(gpulist)
 
 # Divide the mini-batch to different GPUs.
-batch_size = 32
-accum_batch_size = 128
+batch_size = 10
+accum_batch_size = 20
 iter_size = accum_batch_size / batch_size
 solver_mode = P.Solver.CPU
 device_id = 0
