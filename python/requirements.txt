@@ -15,5 +15,6 @@ python-gflags>=2.0; python_version == '2.7'
 pywavelets>=1.0.3; python_version == '2.7'
 pyyaml>=3.10; python_version == '2.7'
 Pillow>=2.3.0; python_version == '2.7'
-six>=1.1.0; python_version == '2.7'
+six>=1.10.0; python_version == '2.7'
 prompt-toolkit<1.0.18; python_version == '2.7'
+matplotlib>=2.0.0
