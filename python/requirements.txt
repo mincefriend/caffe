@@ -1,4 +1,4 @@
-Cython>=0.19.2 ; python_version == '2.7'
+Cython==0.19.2 ; python_version == '2.7'
 numpy==1.9.1; python_version == '2.7'
 scipy>=0.13.2; python_version == '2.7'
 scikit-image==0.9.3; python_version == '2.7'
